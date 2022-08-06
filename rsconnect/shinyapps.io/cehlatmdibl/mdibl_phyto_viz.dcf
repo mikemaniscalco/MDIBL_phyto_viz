@@ -5,10 +5,10 @@ account: cehlatmdibl
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 6663291
-bundleId: 6121741
+bundleId: 6174740
 url: https://cehlatmdibl.shinyapps.io/mdibl_phyto_viz/
-when: 1658460359.53844
-lastSyncTime: 1658460359.53845
+when: 1659803494.88938
+lastSyncTime: 1659803494.8894
 asMultiple: FALSE
 asStatic: FALSE
 ignoredFiles: .secrets/d67d4efb39eee449dc62932502fd8a0f_mmaniscalco@ucsb.edu|tax_table.csv

@@ -4,7 +4,7 @@ library(ggplot2)
 library(tidyverse)
 
 
-
+# 
 # googlesheets4::gs4_auth(path = '.secrets/enduring-coil-349821-3832e38b5b43.json')
 # 
 # df_phyto <- googlesheets4::read_sheet("https://docs.google.com/spreadsheets/d/1JGXLAvG_U9dWn7Ya_NorUU3mcgpi7aX2uanszfhXP8c/edit?sharingaction=ownershiptransfer#gid=641716790",
@@ -14,8 +14,11 @@ library(tidyverse)
 # df_envir <- googlesheets4::read_sheet("https://docs.google.com/spreadsheets/d/1JGXLAvG_U9dWn7Ya_NorUU3mcgpi7aX2uanszfhXP8c/edit?sharingaction=ownershiptransfer#gid=641716790",
 #                                       sheet = "extended_temp")%>%
 #   mutate(day=as.Date(day))
+# save(df_envir,df_phyto,file = "historical_data.Rdata")
 
 load("historical_data.Rdata")
+
+
 
 locationID_select <- c("MDIBL_Dock_22G", "Bar_Harbor_Town_Pier_22D", "Bass_Harbor_21B")
 
@@ -71,7 +74,11 @@ ui = fluidPage(
                                              "Dissolved oxygen (ppm)"= "DOavg_ppm",
                                              "Salinity(1e-3)"= "salinity_ppt",
                                              "Transparency (m)"="transparency_depth_mean",
-                                             "Biological oxygen demand (ppm)"="bod"),
+                                             "Biological oxygen demand (ppm)"="bod",
+                                             "Nitrate (µM)"="nitrate_plus_nitrite",
+                                             "Orthophosphate (µM)"="orthophosphate",
+                                             "Ammonium (µM)"="ammonium",
+                                             "Silicate (µM)"="silicate"),
                                  selected = "water_temp",
                                  multiple = TRUE),
                   selectizeInput("data2",
